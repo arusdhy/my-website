@@ -1,0 +1,110 @@
+.notes-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.notes-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-note-btn {
+  background-color: var(--pastel-mint);
+  color: var(--text-primary);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.note-editor-card {
+  margin-bottom: var(--spacing-xl);
+}
+
+.note-title-input {
+  width: 100%;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  background: transparent;
+}
+
+.note-title-input:focus {
+  outline: none;
+}
+
+.note-content-input {
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  resize: vertical;
+  font-size: 1rem;
+  background: transparent;
+  line-height: 1.5;
+}
+
+.note-content-input:focus {
+  outline: none;
+}
+
+.save-note-btn {
+  background-color: var(--text-primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-md);
+  float: right;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.note-card {
+  position: relative;
+  min-height: 200px;
+}
+
+.note-preview {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.delete-note-btn {
+  position: absolute;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: var(--transition-main);
+}
+
+.note-card:hover .delete-note-btn {
+  opacity: 1;
+}
+
+.delete-note-btn:hover {
+  color: #ef4444;
+}
+
+.empty-notes {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-secondary);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}

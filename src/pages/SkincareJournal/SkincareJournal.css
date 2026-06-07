@@ -1,0 +1,173 @@
+.skincare-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.skincare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.skincare-tabs {
+  display: flex;
+  gap: var(--spacing-xs);
+  background-color: var(--card-bg);
+  padding: 4px;
+  border-radius: 30px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.skincare-tabs .tab {
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition-main);
+}
+
+.skincare-tabs .tab.active {
+  background-color: var(--pastel-blush);
+  color: var(--text-primary);
+}
+
+.add-product-btn {
+  background-color: var(--pastel-blush);
+  color: var(--text-primary);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.product-form input, .product-form select, .product-form textarea {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--bg-color);
+  font-size: 1rem;
+}
+
+.product-form input { flex: 1; }
+.product-form select { flex: 1; }
+.product-form textarea { min-height: 80px; resize: vertical; }
+
+.product-form .save-btn {
+  background-color: var(--text-primary);
+  color: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.product-item-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.product-cat-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--bg-color);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.product-item-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.product-item-actions button:hover {
+  color: var(--text-primary);
+}
+
+.product-item-actions .del-btn:hover {
+  color: #ef4444;
+}
+
+.product-item-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.product-item-brand {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.product-item-notes {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-style: italic;
+  flex: 1;
+}
+
+.product-item-status-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.product-item-status-badge[data-status='using'] { background-color: var(--pastel-mint); color: #065f46; }
+.product-item-status-badge[data-status='finished'] { background-color: #f3f4f6; color: #374151; }
+.product-item-status-badge[data-status='wishlist'] { background-color: var(--pastel-sky); color: #1e40af; }
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-secondary);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

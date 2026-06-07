@@ -1,0 +1,85 @@
+:root {
+  /* Colors - Light Theme (Defaults) */
+  --bg-color: #fbfbfd;
+  --card-bg: #ffffff;
+  --text-primary: #37352f;
+  --text-secondary: #7a7a7a;
+  --border-color: rgba(0, 0, 0, 0.05);
+  
+  /* Pastels */
+  --pastel-blush: #fde2e4;
+  --pastel-sage: #e2ece9;
+  --pastel-sky: #dfe7fd;
+  --pastel-peach: #fff1e6;
+  --pastel-mint: #e8f3f1;
+  --pastel-lavender: #f0e6ff;
+  
+  /* UI Elements */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+  
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+  
+  --transition-main: cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  
+  /* Layout */
+  --container-max-width: 1200px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+}
+
+/* Dark Theme Variables */
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-primary: #e1e1e1;
+  --text-secondary: #a0a0a0;
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* Muted Pastels for Dark Mode */
+  --pastel-blush: #3d2b2d;
+  --pastel-sage: #2a332e;
+  --pastel-sky: #2b2f3d;
+  --pastel-peach: #3d342b;
+  --pastel-mint: #2b3d3a;
+  --pastel-lavender: #342b3d;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: inherit;
+}
