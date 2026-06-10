@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import Card from '../../components/shared/Card/Card';
-import { Heart, Check, History, Layout, Plus, Trash2 } from 'lucide-react';
+import { Heart, Check, History, Layout, Plus } from 'lucide-react';
 import './DeenJournal.css';
 
 interface DeenTodo {

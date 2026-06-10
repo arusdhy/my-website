@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import Card from '../../components/shared/Card/Card';
-import { Plus, Trash2, ShoppingBag, Sparkles, CheckCircle, Package } from 'lucide-react';
+import { Plus, Trash2, Sparkles, CheckCircle, Package } from 'lucide-react';
 import './SkincareJournal.css';
 
 interface Product {

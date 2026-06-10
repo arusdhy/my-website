@@ -40,8 +40,6 @@ const Resources: React.FC = () => {
     setResources(resources.filter(r => r.id !== id));
   };
 
-  const categories = Array.from(new Set(resources.map(r => r.category)));
-
   return (
     <div className="resources-page">
       <div className="resources-header">
